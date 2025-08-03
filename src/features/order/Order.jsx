@@ -3,7 +3,8 @@ import { formatDate, formatCurrency, calcMinutesLeft } from '../../utils/helpers
 
 const Order = () => {
   const order = useLoaderData();
-  const { id, status, priority, priorityPrice, orderPrice, estimatedDelivery, cart } = order;
+
+  const { status, priority, priorityPrice, orderPrice, estimatedDelivery } = order;
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
   return (
